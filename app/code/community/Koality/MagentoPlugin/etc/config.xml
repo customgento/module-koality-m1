@@ -16,6 +16,13 @@
                 <class>Koality_MagentoPlugin_Helper</class>
             </koality_magentoplugin>
         </helpers>
+        <resources>
+            <koality_magentoplugin_setup>
+                <setup>
+                    <module>Koality_MagentoPlugin</module>
+                </setup>
+            </koality_magentoplugin_setup>
+        </resources>
     </global>
     <frontend>
         <routers>
