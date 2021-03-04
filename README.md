@@ -1,2 +1,2 @@
 # module-koality-m1
-koality.io Integration with Magento 1 / OpenMage
+This plugin is used to monitor the business metrics of a Magento 1 / OpenMage shop with koality.io.
