@@ -146,7 +146,7 @@ class Koality_MagentoPlugin_Model_Result
         $this->type = $type;
     }
 
-    public function getObservedValuePrecision(): int
+    public function getObservedValuePrecision(): ?int
     {
         return $this->observedValuePrecision;
     }
