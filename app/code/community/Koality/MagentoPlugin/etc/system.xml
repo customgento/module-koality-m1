@@ -47,6 +47,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+                            <validate>validate-number</validate>
                         </minOrdersPerHourNormal>
                         <rushHourBegin translate="label">
                             <label>When does your rush hour begin?</label>
@@ -80,6 +81,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+                            <validate>validate-number</validate>
                         </minOrdersPerHourRushHour>
                     </fields>
                 </orders_per_hour>
@@ -97,11 +99,12 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+                            <validate>validate-number</validate>
                         </maxOpenCarts>
                     </fields>
                 </open_carts>
                 <active_products translate="label">
-                    <label>Active products</label>
+                    <label>Active Products</label>
                     <sort_order>168</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
@@ -114,11 +117,12 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+                            <validate>validate-number</validate>
                         </minActiveProducts>
                     </fields>
                 </active_products>
                 <newsletter_subscriptions translate="label">
-                    <label>Newsletter Subscribers</label>
+                    <label>Newsletter Subscriptions</label>
                     <sort_order>210</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
@@ -131,6 +135,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+                            <validate>validate-number</validate>
                         </minNewsletterSubscriptions>
                     </fields>
                 </newsletter_subscriptions>
