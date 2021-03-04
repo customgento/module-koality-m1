@@ -1,15 +1,31 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-            <Koality_MagentoPlugin>
+        <Koality_MagentoPlugin>
             <version>1.0.0</version>
         </Koality_MagentoPlugin>
     </modules>
     <global>
+        <models>
+            <koality_magentoplugin>
+                <class>Koality_MagentoPlugin_Model</class>
+            </koality_magentoplugin>
+        </models>
         <helpers>
             <koality_magentoplugin>
                 <class>Koality_MagentoPlugin_Helper</class>
             </koality_magentoplugin>
         </helpers>
     </global>
+    <frontend>
+        <routers>
+            <koality_magentoplugin>
+                <use>standard</use>
+                <args>
+                    <module>Koality_MagentoPlugin</module>
+                    <frontName>koality</frontName>
+                </args>
+            </koality_magentoplugin>
+        </routers>
+    </frontend>
 </config>

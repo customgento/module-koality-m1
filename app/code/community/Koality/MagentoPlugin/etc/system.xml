@@ -24,10 +24,8 @@
                     <fields>
                         <apikey translate="label">
                             <label>Your secret koality.io API key</label>
-                            <frontend_type>text</frontend_type>
-                            <comment>The API key must be added to the koality.io configuration in the koality.io
-                                backend.
-                            </comment>
+                            <frontend_type>label</frontend_type>
+                            <comment>The API key must be added to the koality.io configuration in the koality.io backend.</comment>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -37,7 +35,7 @@
                 </koality_apikey>
                 <rush_hour translate="label">
                     <label>Rush hour</label>
-                    <sort_order>42</sort_order>
+                    <sort_order>84</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -58,93 +56,93 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </rushHourEnd>
-                        <ordersPerHourRushHour translate="label">
-                            <label>How many orders do you at least expect every hour in the rush hour?</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>126</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </ordersPerHourRushHour>
                         <includeWeekends translate="label">
                             <label>Does the rush hour also happen on the weekend?</label>
                             <frontend_type>text</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>168</sort_order>
+                            <sort_order>126</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </includeWeekends>
+                        <minOrdersPerHourRushHour translate="label">
+                            <label>How many orders do you at least expect every hour in the rush hour?</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>168</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </minOrdersPerHourRushHour>
                     </fields>
                 </rush_hour>
                 <opening_hours translate="label">
                     <label>Opening hours</label>
-                    <sort_order>42</sort_order>
+                    <sort_order>126</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <ordersPerHourNormal translate="label">
+                        <minOrdersPerHourNormal translate="label">
                             <label>How many orders do you at least expect every hour outside the rush hour?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </ordersPerHourNormal>
+                        </minOrdersPerHourNormal>
                     </fields>
                 </opening_hours>
                 <open_carts translate="label">
                     <label>Open Carts</label>
-                    <sort_order>42</sort_order>
+                    <sort_order>168</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <openCarts translate="label">
+                        <maxOpenCarts translate="label">
                             <label>How many open carts may exist?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </openCarts>
+                        </maxOpenCarts>
                     </fields>
                 </open_carts>
                 <active_products translate="label">
                     <label>Active products</label>
-                    <sort_order>42</sort_order>
+                    <sort_order>210</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <activeProducts translate="label">
+                        <minActiveProducts translate="label">
                             <label>How many active products must at least exist?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </activeProducts>
+                        </minActiveProducts>
                     </fields>
                 </active_products>
-                <newsletter_subscribers translate="label">
+                <newsletter_subscriptions translate="label">
                     <label>Newsletter Subscribers</label>
-                    <sort_order>42</sort_order>
+                    <sort_order>252</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <newsletterSubscriptions translate="label">
+                        <minNewsletterSubscriptions translate="label">
                             <label>How many new newsletter subscriptions should be made daily?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </newsletterSubscriptions>
+                        </minNewsletterSubscriptions>
                     </fields>
-                </newsletter_subscribers>
+                </newsletter_subscriptions>
             </groups>
         </koality_service>
     </sections>
