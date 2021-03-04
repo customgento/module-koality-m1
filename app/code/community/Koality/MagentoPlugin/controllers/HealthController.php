@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-class Koality_MagentoPlugin_IndexController extends Mage_Core_Controller_Front_Action
+class Koality_MagentoPlugin_HealthController extends Mage_Core_Controller_Front_Action
 {
-    public function indexAction()
+    public function statusAction()
     {
         $currentApiKey = $this->getRequest()->getParam('apikey');
 
