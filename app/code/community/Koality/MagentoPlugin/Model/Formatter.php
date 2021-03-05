@@ -8,7 +8,7 @@ class Koality_MagentoPlugin_Model_Formatter
 {
     private $results = [];
 
-    public function addResult(Result $result)
+    public function addResult(Result $result): void
     {
         $this->results[] = $result;
     }

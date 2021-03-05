@@ -1,8 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
-/* @var Mage_Core_Model_Resource_Setup $installer */
 $installer = $this;
 $installer->startSetup();
 $setup = $installer->getConnection();

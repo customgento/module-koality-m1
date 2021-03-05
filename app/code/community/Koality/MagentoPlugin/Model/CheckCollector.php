@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 class Koality_MagentoPlugin_Model_CheckCollector
 {
-    public function generateResponse()
+    public function generateResponse(): string
     {
         $checkClasses = [
             'activeProductsCheck',
