@@ -37,11 +37,9 @@ class Koality_MagentoPlugin_Model_Checks_CurrentOrdersCheck
         if ($useRushHour && $configGetter->getRushhourBegin() && $configGetter->getRushhourEnd()) {
             $currentTimeStamp       = Mage::getModel('core/locale')->storeTimeStamp();
             $beginRushHourTimeArray = explode(',', $configGetter->getRushhourBegin());
-            $beginRushHourTimestamp = strtotime($beginRushHourTimeArray[0] . ':' . $beginRushHourTimeArray[1] . ':'
-                . $beginRushHourTimeArray[2]);
+            $beginRushHourTimestamp = $this->getTimestampFromTimeArray($beginRushHourTimeArray);
             $endRushHourTimeArray   = explode(',', $configGetter->getRushhourEnd());
-            $endRushHourTimestamp   = strtotime($endRushHourTimeArray[0] . ':' . $endRushHourTimeArray[1] . ':'
-                . $endRushHourTimeArray[2]);
+            $endRushHourTimestamp   = $this->getTimestampFromTimeArray($endRushHourTimeArray);
             if ($currentTimeStamp > $beginRushHourTimestamp && $currentTimeStamp < $endRushHourTimestamp) {
                 return $configGetter->getMinExpectedOrdersPerRushhour();
             }
@@ -57,5 +55,10 @@ class Koality_MagentoPlugin_Model_Checks_CurrentOrdersCheck
 
         return Mage::getModel('sales/order')->getCollection()
             ->addFieldToFilter('created_at', ['from' => $fromTime, 'to' => $toTime])->getSize();
+    }
+
+    private function getTimestampFromTimeArray(array $timeArray): int
+    {
+        return strtotime($timeArray[0] . ':' . $timeArray[1] . ':' . $timeArray[2]);
     }
 }

@@ -8,8 +8,8 @@ class Koality_MagentoPlugin_Model_Checks_ActiveProductsCheck
 {
     public function getResult(): Result
     {
-        $expectedActiveProductsQty = Mage::getModel('koality_magentoplugin/service_config')->getMinExpectedActiveProducts()
-            ?? 0;
+        $expectedActiveProductsQty = Mage::getModel('koality_magentoplugin/service_config')
+            ->getMinExpectedActiveProducts();
         $activeProductsQty         = $this->getActiveProductsQty();
 
         if ($activeProductsQty < $expectedActiveProductsQty) {
