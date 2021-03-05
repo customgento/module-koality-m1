@@ -9,8 +9,7 @@ class Koality_MagentoPlugin_Model_CheckCollector
         $checkClasses = [
             'activeProductsCheck',
             'currentOrdersCheck',
-            'openCartsCheck',
-            'newsletterSubscriberCheck'
+            'openCartsCheck'
         ];
         $formatter    = Mage::getModel('koality_magentoplugin/formatter');
         foreach ($checkClasses as $checkClass) {

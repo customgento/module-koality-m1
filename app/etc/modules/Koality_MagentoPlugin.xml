@@ -8,7 +8,6 @@
                 <Mage_Api2/>
                 <Mage_Catalog/>
                 <Mage_Core/>
-                <Mage_Newsletter/>
                 <Mage_Sales/>
             </depends>
         </Koality_MagentoPlugin>

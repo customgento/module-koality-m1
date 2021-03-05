@@ -12,7 +12,6 @@ class Koality_MagentoPlugin_Model_Service_Config
     public const MIN_EXPECTED_ORDERS_PER_HOUR_NORMAL = 'koality_service/orders_per_hour/minOrdersPerHourNormal';
     public const MAX_EXPECTED_OPEN_CARTS = 'koality_service/open_carts/maxOpenCarts';
     public const MIN_EXPECTED_ACTIVE_PRODUCTS = 'koality_service/active_products/minActiveProducts';
-    public const MIN_EXPECTED_NEWSLETTER_SUBSCRIPTIONS = 'koality_service/newsletter_subscriptions/minNewsletterSubscriptions';
 
     public function getApiKey(): string
     {
@@ -52,10 +51,5 @@ class Koality_MagentoPlugin_Model_Service_Config
     public function getMinExpectedActiveProducts(): int
     {
         return (int)Mage::getStoreConfig(self::MIN_EXPECTED_ACTIVE_PRODUCTS);
-    }
-
-    public function getMinExpectedNewsletterSubsriptions(): int
-    {
-        return (int)Mage::getStoreConfig(self::MIN_EXPECTED_NEWSLETTER_SUBSCRIPTIONS);
     }
 }

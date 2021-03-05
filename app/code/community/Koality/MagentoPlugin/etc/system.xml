@@ -121,24 +121,6 @@
                         </minActiveProducts>
                     </fields>
                 </active_products>
-                <newsletter_subscriptions translate="label">
-                    <label>Newsletter Subscriptions</label>
-                    <sort_order>210</sort_order>
-                    <show_in_default>1</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <show_in_store>1</show_in_store>
-                    <fields>
-                        <minNewsletterSubscriptions translate="label">
-                            <label>How many new newsletter subscriptions should be made daily?</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>42</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <validate>validate-number</validate>
-                        </minNewsletterSubscriptions>
-                    </fields>
-                </newsletter_subscriptions>
             </groups>
         </koality_service>
     </sections>
