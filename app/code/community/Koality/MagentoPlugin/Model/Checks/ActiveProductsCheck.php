@@ -11,7 +11,6 @@ class Koality_MagentoPlugin_Model_Checks_ActiveProductsCheck
         $expectedActiveProductsQty = Mage::getModel('koality_magentoplugin/service_config')
             ->getMinExpectedActiveProducts();
         $activeProductsQty         = $this->getActiveProductsQty();
-
         if ($activeProductsQty < $expectedActiveProductsQty) {
             $activeProductsCheckResult = new Result(Result::STATUS_FAIL, Result::KEY_PRODUCTS_ACTIVE,
                 'There are too few active products in your shop.');

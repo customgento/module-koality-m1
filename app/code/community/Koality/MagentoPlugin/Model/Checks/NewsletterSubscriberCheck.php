@@ -19,7 +19,6 @@ class Koality_MagentoPlugin_Model_Checks_NewsletterSubscriberCheck
             $newsletterSubscriptionsCheckResult = new Result(Result::STATUS_PASS, Result::KEY_NEWSLETTER_TOO_FEW,
                 'There were enough newsletter subscriptions yesterday.');
         }
-
         $newsletterSubscriptionsCheckResult->setLimit($expectedMinNewsletterSubscriptions);
         $newsletterSubscriptionsCheckResult->setObservedValue($currentNewsletterSubscriptions);
         $newsletterSubscriptionsCheckResult->setObservedValueUnit('newsletters');

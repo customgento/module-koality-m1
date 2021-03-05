@@ -12,7 +12,6 @@ class Koality_MagentoPlugin_Model_Checks_OpenCartsCheck
 
         $maxExpectedCartQty = Mage::getModel('koality_magentoplugin/service_config')->getMaxExpectedOpenCarts();
         $currentOpenCartQty = $this->getCurrentOpenCartQty();
-
         if ($currentOpenCartQty > $maxExpectedCartQty) {
             $openCartCheckResult = new Result(Result::STATUS_FAIL, Result::KEY_CARTS_OPEN_TOO_MANY,
                 'There are too many open carts at the moment.');

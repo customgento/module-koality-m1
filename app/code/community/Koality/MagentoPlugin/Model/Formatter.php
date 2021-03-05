@@ -18,49 +18,38 @@ class Koality_MagentoPlugin_Model_Formatter
         $formattedResult = [];
         $checks          = [];
         $status          = Result::STATUS_PASS;
-
         foreach ($this->results as $result) {
             $check = [
                 'status' => $result->getStatus(),
                 'output' => $result->getMessage()
             ];
-
             if (is_numeric($result->getLimit())) {
                 $check['limit'] = $result->getLimit();
             }
-
             if (!is_null($result->getLimitType())) {
                 $check['limitType'] = $result->getLimitType();
             }
-
             if (!is_null($result->getObservedValue())) {
                 $check['observedValue'] = $result->getObservedValue();
             }
-
             if (!is_null($result->getObservedValueUnit())) {
                 $check['observedUnit'] = $result->getObservedValueUnit();
             }
-
             if (!is_null($result->getObservedValuePrecision())) {
                 $check['observedValuePrecision'] = $result->getObservedValuePrecision();
             }
-
             if (!is_null($result->getType())) {
                 $check['metricType'] = $result->getType();
             }
-
             $attributes = $result->getAttributes();
             if (count($attributes) > 0) {
                 $check['attributes'] = $attributes;
             }
-
             $checks[$result->getKey()] = $check;
-
             if ($result->getStatus() === Result::STATUS_FAIL) {
                 $status = Result::STATUS_FAIL;
             }
         }
-
         $formattedResult['status'] = $status;
         $formattedResult['output'] = $this->getOutput($status);
         $formattedResult['checks'] = $checks;

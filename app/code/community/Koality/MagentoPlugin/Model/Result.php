@@ -8,13 +8,10 @@ class Koality_MagentoPlugin_Model_Result
     public const KEY_ORDERS_TOO_FEW = 'orders.too_few';
     public const KEY_CARTS_OPEN_TOO_MANY = 'carts.open.too_many';
     public const KEY_PRODUCTS_ACTIVE = 'products.active';
-
     public const STATUS_PASS = 'pass';
     public const STATUS_FAIL = 'fail';
-
     public const LIMIT_TYPE_MIN = 'min';
     public const LIMIT_TYPE_MAX = 'max';
-
     public const TYPE_TIME_SERIES_NUMERIC = 'time_series_numeric';
 
     /**
