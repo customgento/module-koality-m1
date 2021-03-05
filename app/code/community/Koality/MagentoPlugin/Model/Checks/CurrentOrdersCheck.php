@@ -35,10 +35,14 @@ class Koality_MagentoPlugin_Model_Checks_CurrentOrdersCheck
         $configGetter   = Mage::getModel('koality_magentoplugin/service_config');
         $useRushHour    = $configGetter->getDoesRushhourIncludeWeekends() || !$isWeekend;
         if ($useRushHour && $configGetter->getRushhourBegin() && $configGetter->getRushhourEnd()) {
-            $beginHour   = $configGetter->getRushhourBegin();
-            $endHour     = $configGetter->getRushhourEnd();
-            $currentTime = (int)date('Hi');
-            if ($currentTime < $endHour && $currentTime > $beginHour) {
+            $currentTimeStamp       = Mage::getModel('core/locale')->storeTimeStamp();
+            $beginRushHourTimeArray = explode(',', $configGetter->getRushhourBegin());
+            $beginRushHourTimestamp = strtotime($beginRushHourTimeArray[0] . ':' . $beginRushHourTimeArray[1] . ':'
+                . $beginRushHourTimeArray[2]);
+            $endRushHourTimeArray   = explode(',', $configGetter->getRushhourEnd());
+            $endRushHourTimestamp   = strtotime($endRushHourTimeArray[0] . ':' . $endRushHourTimeArray[1] . ':'
+                . $endRushHourTimeArray[2]);
+            if ($currentTimeStamp > $beginRushHourTimestamp && $currentTimeStamp < $endRushHourTimestamp) {
                 return $configGetter->getMinExpectedOrdersPerRushhour();
             }
         }
