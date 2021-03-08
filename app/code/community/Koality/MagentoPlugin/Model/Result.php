@@ -58,6 +58,9 @@ class Koality_MagentoPlugin_Model_Result
      */
     private $type;
 
+    /**
+     * @var array
+     */
     private $attributes = [];
 
     public function __construct(string $status, string $key, string $message)
