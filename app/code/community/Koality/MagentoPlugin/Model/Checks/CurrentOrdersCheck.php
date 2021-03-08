@@ -49,11 +49,10 @@ class Koality_MagentoPlugin_Model_Checks_CurrentOrdersCheck
 
     private function getLastHourOrderCount(): int
     {
-        $toTime   = date('Y-m-d H:i:s');
         $fromTime = date('Y-m-d H:i:s', strtotime('- 1 hour'));
 
-        return Mage::getModel('sales/order')->getCollection()
-            ->addFieldToFilter('created_at', ['from' => $fromTime, 'to' => $toTime])->getSize();
+        return Mage::getModel('sales/order')->getCollection()->addFieldToFilter('created_at', ['from' => $fromTime])
+            ->getSize();
     }
 
     private function getTimestampFromTimeArray(array $timeArray): int
