@@ -6,7 +6,6 @@ use Koality_MagentoPlugin_Model_Result as Result;
 
 class Koality_MagentoPlugin_Model_Checks_CurrentOrdersCheck
 {
-
     public function getResult(): Result
     {
         $expectedOrderQty = $this->getExpectedOrderQty();
