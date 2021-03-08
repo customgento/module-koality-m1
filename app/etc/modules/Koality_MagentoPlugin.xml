@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Koality_MagentoPlugin>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Catalog/>
+                <Mage_Core/>
+                <Mage_Sales/>
+            </depends>
+        </Koality_MagentoPlugin>
+    </modules>
+</config>
