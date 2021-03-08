@@ -29,11 +29,9 @@ class Koality_MagentoPlugin_Model_Checks_OpenCartsCheck
 
     private function getCurrentOpenCartQty(): int
     {
-        $toTime   = date('Y-m-d H:i:s');
         $fromTime = date('Y-m-d H:i:s', strtotime('-1 hour'));
 
         return Mage::getModel('sales/quote')->getCollection()->addFieldToFilter('is_active', ['eq' => 1])
-            ->addFieldToFilter('created_at', ['from' => $fromTime, 'to' => $toTime])->getSize();
-
+            ->addFieldToFilter('created_at', ['from' => $fromTime])->getSize();
     }
 }
