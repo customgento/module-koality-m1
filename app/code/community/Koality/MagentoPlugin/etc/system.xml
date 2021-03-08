@@ -1,15 +1,9 @@
 <?xml version="1.0"?>
 <config>
-    <tabs>
-        <koality translate="label" module="koality_magentoplugin">
-            <label>Koality</label>
-            <sort_order>420</sort_order>
-        </koality>
-    </tabs>
     <sections>
         <koality_service translate="label" module="koality_magentoplugin">
-            <label>Koality Service</label>
-            <tab>koality</tab>
+            <label>koality.io</label>
+            <tab>service</tab>
             <sort_order>42</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
