@@ -18,5 +18,4 @@ class Koality_MagentoPlugin_Model_CheckCollector
 
         return $formatter->getFormattedResults();
     }
-
 }
