@@ -6,7 +6,7 @@ $setup     = $installer->getConnection();
 $setup->insert(
     $this->getTable('core_config_data'),
     [
-        'path'  => 'koality_service/koality_apikey/apikey',
+        'path'  => Koality_MagentoPlugin_Model_Service_Config::KOALITY_API_KEY,
         'value' => Mage::helper('koality_magentoplugin')->createRandomApiKey()
     ]
 );
