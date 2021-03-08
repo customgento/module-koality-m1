@@ -70,8 +70,8 @@ class Koality_MagentoPlugin_Model_Formatter
     private function getInfoBlock(): array
     {
         return [
-            'creator'    => 'koality.io Magento Plugin',
-            'version'    => '1.0.0',
+            'creator'    => 'oality.io Magento 1 / OpenMage Plugin',
+            'version'    => Mage::getConfig()->getModuleConfig('Koality_MagentoPlugin')->asArray()['version'],
             'plugin_url' => 'https://www.koality.io/plugins/magento'
         ];
     }
