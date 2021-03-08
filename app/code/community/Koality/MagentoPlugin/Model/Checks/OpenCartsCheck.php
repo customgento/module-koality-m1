@@ -6,10 +6,8 @@ use Koality_MagentoPlugin_Model_Result as Result;
 
 class Koality_MagentoPlugin_Model_Checks_OpenCartsCheck
 {
-
     public function getResult(): Result
     {
-
         $maxExpectedCartQty = Mage::getModel('koality_magentoplugin/service_config')->getMaxExpectedOpenCarts();
         $currentOpenCartQty = $this->getCurrentOpenCartQty();
         if ($currentOpenCartQty > $maxExpectedCartQty) {
