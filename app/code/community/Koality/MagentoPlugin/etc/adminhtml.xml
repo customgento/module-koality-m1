@@ -9,7 +9,7 @@
                             <config>
                                 <children>
                                     <koality_service>
-                                        <title>Koality Configuration</title>
+                                        <title>koality.io</title>
                                     </koality_service>
                                 </children>
                             </config>
