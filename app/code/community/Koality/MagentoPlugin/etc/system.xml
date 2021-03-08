@@ -34,7 +34,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <minOrdersPerHourNormal translate="label">
+                        <min_orders_per_normal_hour translate="label">
                             <label>How many orders do you at least expect every hour outside the rush hour?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>42</sort_order>
@@ -42,24 +42,24 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <validate>validate-number</validate>
-                        </minOrdersPerHourNormal>
-                        <rushHourBegin translate="label">
+                        </min_orders_per_normal_hour>
+                        <rush_hour_begin translate="label">
                             <label>When does your rush hour begin?</label>
                             <frontend_type>time</frontend_type>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </rushHourBegin>
-                        <rushHourEnd translate="label">
+                        </rush_hour_begin>
+                        <rush_hour_end translate="label">
                             <label>When does your rush hour end?</label>
                             <frontend_type>time</frontend_type>
                             <sort_order>84</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </rushHourEnd>
-                        <includeWeekends translate="label">
+                        </rush_hour_end>
+                        <include_weekends translate="label">
                             <label>Does the rush hour also happen on the weekend?</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
@@ -67,8 +67,8 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </includeWeekends>
-                        <minOrdersPerHourRushHour translate="label">
+                        </include_weekends>
+                        <min_orders_per_hour_rush_hour translate="label">
                             <label>How many orders do you at least expect every hour in the rush hour?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>168</sort_order>
@@ -76,7 +76,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <validate>validate-number</validate>
-                        </minOrdersPerHourRushHour>
+                        </min_orders_per_hour_rush_hour>
                     </fields>
                 </orders_per_hour>
                 <open_carts translate="label">
@@ -86,7 +86,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <maxOpenCarts translate="label">
+                        <max_open_carts translate="label">
                             <label>How many open carts may exist?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>42</sort_order>
@@ -94,7 +94,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <validate>validate-number</validate>
-                        </maxOpenCarts>
+                        </max_open_carts>
                     </fields>
                 </open_carts>
                 <active_products translate="label">
@@ -104,7 +104,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <minActiveProducts translate="label">
+                        <min_active_products translate="label">
                             <label>How many active products must at least exist?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>42</sort_order>
@@ -112,7 +112,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <validate>validate-number</validate>
-                        </minActiveProducts>
+                        </min_active_products>
                     </fields>
                 </active_products>
             </groups>
