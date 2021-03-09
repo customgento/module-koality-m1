@@ -68,7 +68,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </include_weekends>
-                        <min_orders_per_hour_rush_hour translate="label">
+                        <min_orders_per_rush_hour translate="label">
                             <label>How many orders do you at least expect every hour in the rush hour?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>168</sort_order>
@@ -76,7 +76,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <validate>validate-number</validate>
-                        </min_orders_per_hour_rush_hour>
+                        </min_orders_per_rush_hour>
                     </fields>
                 </orders_per_hour>
                 <open_carts translate="label">
