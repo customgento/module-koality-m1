@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 class Koality_MagentoPlugin_Model_Service_Config
 {
-    public const KOALITY_API_KEY = 'koality_service/koality_apikey/apikey';
+    public const KOALITY_API_KEY = 'koality_service/api/key';
     public const RUSHHOUR_BEGIN = 'koality_service/orders_per_hour/rush_hour_begin';
     public const RUSHHOUR_END = 'koality_service/orders_per_hour/rush_hour_end';
     public const MIN_EXPECTED_ORDERS_PER_RUSHHOUR = 'koality_service/orders_per_hour/min_orders_per_hour_rush_hour';

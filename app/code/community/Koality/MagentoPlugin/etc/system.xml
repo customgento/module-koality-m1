@@ -9,24 +9,24 @@
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>exit
             <groups>
-                <koality_apikey translate="label">
-                    <label>koality.io API key</label>
+                <api translate="label">
+                    <label>API key</label>
                     <sort_order>42</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <apikey translate="label">
-                            <label>Your secret koality.io API key</label>
+                        <key translate="label">
+                            <label>Your secret API key</label>
                             <frontend_type>label</frontend_type>
-                            <comment>The API key must be added to the koality.io configuration in the koality.io backend.</comment>
+                            <comment>The API key must be added to the configuration in the koality.io backend.</comment>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </apikey>
+                        </key>
                     </fields>
-                </koality_apikey>
+                </api>
                 <orders_per_hour translate="label">
                     <label>Orders per hour</label>
                     <sort_order>84</sort_order>
