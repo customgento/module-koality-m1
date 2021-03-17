@@ -28,7 +28,7 @@ class Koality_MagentoPlugin_Block_Adminhtml_System_Config_Form_RefreshApiKeyButt
         return $button->toHtml();
     }
 
-    public function getAjaxCheckUrl(): string
+    public function getRefreshApiKeyUrl(): string
     {
         return Mage::helper('adminhtml')->getUrl('adminhtml/api/refresh');
     }
