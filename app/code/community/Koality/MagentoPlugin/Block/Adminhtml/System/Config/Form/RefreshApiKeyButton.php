@@ -5,13 +5,13 @@ declare(strict_types=1);
 class Koality_MagentoPlugin_Block_Adminhtml_System_Config_Form_RefreshApiKeyButton
     extends Mage_Adminhtml_Block_System_Config_Form_Field
 {
-    protected function _construct()
+    protected function _construct(): void
     {
         parent::_construct();
         $this->setTemplate('koality/system/config/button.phtml');
     }
 
-    protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element)
+    protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element): string
     {
         return $this->_toHtml();
     }
