@@ -23,6 +23,11 @@
                 </setup>
             </koality_magentoplugin_setup>
         </resources>
+        <blocks>
+            <koality_magentoplugin>
+                <class>Koality_MagentoPlugin_Block</class>
+            </koality_magentoplugin>
+        </blocks>
     </global>
     <frontend>
         <routers>
@@ -35,4 +40,15 @@
             </koality_magentoplugin>
         </routers>
     </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Koality_MagentoPlugin before="-">Koality_MagentoPlugin</Koality_MagentoPlugin>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config>
