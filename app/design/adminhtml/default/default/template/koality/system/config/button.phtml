@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    function refreshApiKey() {
+    function refreshKoalityApiKey() {
         new Ajax.Request('<?php echo $this->getAjaxCheckUrl() ?>', {
             method: 'post', onComplete: function (transport) {
                 let newApiKey = transport.responseText

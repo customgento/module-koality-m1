@@ -22,7 +22,7 @@ class Koality_MagentoPlugin_Block_Adminhtml_System_Config_Form_RefreshApiKeyButt
             ->createBlock('adminhtml/widget_button')
             ->setData([
                 'label'   => $this->helper('adminhtml')->__('Refresh API Key'),
-                'onclick' => 'javascript:refreshApiKey();'
+                'onclick' => 'javascript:refreshKoalityApiKey();'
             ]);
 
         return $button->toHtml();
