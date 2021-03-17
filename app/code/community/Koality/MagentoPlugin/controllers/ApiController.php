@@ -16,5 +16,4 @@ class Koality_MagentoPlugin_ApiController extends Mage_Adminhtml_Controller_Acti
             ->saveConfig(Koality_MagentoPlugin_Model_Service_Config::KOALITY_API_KEY, $newApiKey);
         $this->getResponse()->setBody($newApiKey);
     }
-
 }
