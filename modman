@@ -1,3 +1,3 @@
-app/code/community/Koality/MagentoPlugin app/code/community/Koality/MagentoPlugin
-app/design/adminhtml/default/default/template/koality/ app/design/adminhtml/default/default/template/koality/
-app/etc/modules/Koality_MagentoPlugin.xml app/etc/modules/Koality_MagentoPlugin.xml
+src/app/code/community/Koality/MagentoPlugin app/code/community/Koality/MagentoPlugin
+src/app/design/adminhtml/default/default/template/koality/ app/design/adminhtml/default/default/template/koality/
+src/app/etc/modules/Koality_MagentoPlugin.xml app/etc/modules/Koality_MagentoPlugin.xml
