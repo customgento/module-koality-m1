@@ -9,5 +9,8 @@
             "name": "Team CustomGento",
             "email": "info@customgento.com"
         }
-    ]
+    ],
+    "require": {
+        "php": "~7.3.0||~7.4.0"
+    }
 }
