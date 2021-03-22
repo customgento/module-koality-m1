@@ -1,4 +1,3 @@
-
 # koality.io Magento1 / OpenMage Plugin
 ## Description
 This plugin can be used to continuously monitor a Magento1 / OpenMage shop for business metrics.
