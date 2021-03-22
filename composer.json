@@ -1,0 +1,16 @@
+{
+    "name": "koality/magento-plugin",
+    "type": "magento-module",
+    "license": "OSL-3.0",
+    "homepage": "https://github.com/customgento/module-koality-m1",
+    "description": "koality.io Integration with Magento 1 / OpenMage",
+    "authors": [
+        {
+            "name": "Team CustomGento",
+            "email": "info@customgento.com"
+        }
+    ],
+    "require": {
+        "php": "~7.3.0||~7.4.0"
+    }
+}
