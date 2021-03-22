@@ -88,7 +88,7 @@ https://tools.ietf.org/html/draft-inadarei-api-health-check-05
 - OpenMage
 
 ## Installation Instructions
-1. Copy all files from the src folder into your document root
+1. Copy all files from the `src` folder into your document root
 2. Clear the cache
 
 ## Configuration
