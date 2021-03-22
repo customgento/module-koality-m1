@@ -127,4 +127,4 @@ If you have any issues with this extension, please open a [GitHub issue](https:/
 [OSL - Open Software Licence 3.0](https://opensource.org/licenses/osl-3.0.php)
 
 ## Copyright
-© 2012-2021 CustomGento GmbH
+© 2021 CustomGento GmbH
