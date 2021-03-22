@@ -121,7 +121,7 @@ If there are less active products, then entered here, the metric will fail in th
 2. Clear the cache.
 
 ## Support
-If you have any issues with this extension, please contact the koality.io support
+If you have any issues with this extension, please open a [GitHub issue](https://github.com/customgento/module-koality-m1/issues/new). If you have any issues with koality.io, please contact the koality.io support.
 
 ## Licence
 [OSL - Open Software Licence 3.0](https://opensource.org/licenses/osl-3.0.php)
