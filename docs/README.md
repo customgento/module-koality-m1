@@ -1,6 +1,6 @@
-# koality.io Magento1 / OpenMage Plugin
+# koality.io Magento 1 / OpenMage Plugin
 ## Description
-This plugin can be used to continuously monitor a Magento1 / OpenMage shop for business metrics.
+This plugin can be used to continuously monitor a Magento 1 / OpenMage shop for business metrics.
 
 ## Layout in koality.io backend
 ![Active products](images/active_products.png "Active products")
@@ -13,11 +13,11 @@ The following metrics are currently implemented:
 
 - **Minimum orders per hour** - this check fails if the number of orders within the last hour falls under a given threshold. The check provides two time intervals. Rush hour and normal shopping time. This is needed to minimize false positives.
 
-
 - **Maximum number of open carts** - fails if there are to many open carts. This often happens if the payment fails, and the customers can't finish the buying process.
 
-
 - **Minimum number of active products** - this check fails if there are not enough active products in the should. This will help find import errors.
+
+- **Custom Metrics** - we are more than happy to discuss the development of custom metrics just for you. Feel free to contact us at [customgento.com](https://www.customgento.com/).
 
 ## How the plugin works
 
