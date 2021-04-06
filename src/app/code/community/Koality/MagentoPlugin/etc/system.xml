@@ -36,7 +36,7 @@
                     </fields>
                 </api>
                 <rush_hour>
-                    <label>Orders per hour</label>
+                    <label>Rush hour</label>
                     <sort_order>84</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
