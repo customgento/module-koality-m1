@@ -8,9 +8,9 @@
                         <children>
                             <config>
                                 <children>
-                                    <koality_service>
+                                    <koality>
                                         <title>koality.io</title>
-                                    </koality_service>
+                                    </koality>
                                 </children>
                             </config>
                         </children>

@@ -3,7 +3,7 @@
         new Ajax.Request('<?php echo $this->getRefreshApiKeyUrl() ?>', {
             method: 'post', onComplete: function (transport) {
                 let newApiKey = transport.responseText
-                let valueElement = document.querySelector('#row_koality_service_api_key .value')
+                let valueElement = document.querySelector('#row_koality_api_key .value')
                 let oldApiKey = valueElement.innerHTML.match('.+?(?=<p)')
                 valueElement.innerHTML = valueElement.innerHTML.replace(oldApiKey, newApiKey)
             }

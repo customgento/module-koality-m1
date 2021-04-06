@@ -77,7 +77,7 @@
                     <show_in_store>1</show_in_store>
                     <fields>
                         <min_orders_per_normal_hour translate="label">
-                            <label>How many orders do you at least expect every hour outside the rush hour?</label>
+                            <label>How many orders do you at least expect every hour in general?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
@@ -104,7 +104,7 @@
                     <show_in_store>1</show_in_store>
                     <fields>
                         <max_open_carts_per_normal_hour translate="label">
-                            <label>How many open carts may exist?</label>
+                            <label>How many open carts may exist in general?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
