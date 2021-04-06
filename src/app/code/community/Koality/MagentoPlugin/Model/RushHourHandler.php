@@ -12,12 +12,13 @@ class Koality_MagentoPlugin_Model_RushHourHandler
         $useRushHour    = $configGetter->getDoesRushhourIncludeWeekends() || !$isWeekend;
         if ($useRushHour && $configGetter->getRushhourBegin() && $configGetter->getRushhourEnd()) {
             $currentTimeStamp       = Mage::getModel('core/locale')->storeTimeStamp();
+            $timeStampOneHourAgo    = $currentTimeStamp - 3600;
             $beginRushHourTimeArray = explode(',', $configGetter->getRushhourBegin());
             $beginRushHourTimestamp = $this->getTimestampFromTimeArray($beginRushHourTimeArray);
             $endRushHourTimeArray   = explode(',', $configGetter->getRushhourEnd());
             $endRushHourTimestamp   = $this->getTimestampFromTimeArray($endRushHourTimeArray);
 
-            return ($currentTimeStamp > $beginRushHourTimestamp && $currentTimeStamp < $endRushHourTimestamp);
+            return ($timeStampOneHourAgo > $beginRushHourTimestamp && $currentTimeStamp < $endRushHourTimestamp);
         }
 
         return false;
