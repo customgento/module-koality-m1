@@ -28,5 +28,4 @@ class Koality_MagentoPlugin_Model_RushHourHandler
     {
         return strtotime($timeArray[0] . ':' . $timeArray[1] . ':' . $timeArray[2]);
     }
-
 }
