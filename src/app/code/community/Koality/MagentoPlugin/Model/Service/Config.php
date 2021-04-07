@@ -4,18 +4,19 @@ declare(strict_types=1);
 
 class Koality_MagentoPlugin_Model_Service_Config
 {
-    public const KOALITY_API_KEY = 'koality_service/api/key';
-    public const RUSHHOUR_BEGIN = 'koality_service/orders_per_hour/rush_hour_begin';
-    public const RUSHHOUR_END = 'koality_service/orders_per_hour/rush_hour_end';
-    public const MIN_EXPECTED_ORDERS_PER_RUSHHOUR = 'koality_service/orders_per_hour/min_orders_per_rush_hour';
-    public const RUSHHOUR_INCLUDES_WEEKENDS = 'koality_service/orders_per_hour/include_weekends';
-    public const MIN_EXPECTED_ORDERS_PER_HOUR_NORMAL = 'koality_service/orders_per_hour/min_orders_per_normal_hour';
-    public const MAX_EXPECTED_OPEN_CARTS = 'koality_service/open_carts/max_open_carts';
-    public const MIN_EXPECTED_ACTIVE_PRODUCTS = 'koality_service/active_products/min_active_products';
+    public const API_KEY = 'koality/api/key';
+    public const RUSHHOUR_BEGIN = 'koality/rush_hour/begin';
+    public const RUSHHOUR_END = 'koality/rush_hour/end';
+    public const RUSHHOUR_INCLUDES_WEEKENDS = 'koality/rush_hour/include_weekends';
+    public const MIN_EXPECTED_ORDERS_PER_HOUR_NORMAL = 'koality/orders_per_hour/min_orders_per_normal_hour';
+    public const MIN_EXPECTED_ORDERS_PER_RUSHHOUR = 'koality/orders_per_hour/min_orders_per_rush_hour';
+    public const MAX_EXPECTED_OPEN_CARTS_PER_HOUR_NORMAL = 'koality/open_carts/max_open_carts_per_normal_hour';
+    public const MAX_EXPECTED_OPEN_CARTS_PER_RUSH_HOUR = 'koality/open_carts/max_open_carts_per_rush_hour';
+    public const MIN_EXPECTED_ACTIVE_PRODUCTS = 'koality/active_products/min_active_products';
 
     public function getApiKey(): string
     {
-        return Mage::getStoreConfig(self::KOALITY_API_KEY);
+        return Mage::getStoreConfig(self::API_KEY);
     }
 
     public function getRushhourBegin(): string
@@ -28,11 +29,6 @@ class Koality_MagentoPlugin_Model_Service_Config
         return Mage::getStoreConfig(self::RUSHHOUR_END) ?: '';
     }
 
-    public function getMinExpectedOrdersPerRushhour(): int
-    {
-        return (int)Mage::getStoreConfig(self::MIN_EXPECTED_ORDERS_PER_RUSHHOUR);
-    }
-
     public function getDoesRushhourIncludeWeekends(): bool
     {
         return Mage::getStoreConfigFlag(self::RUSHHOUR_INCLUDES_WEEKENDS);
@@ -43,9 +39,19 @@ class Koality_MagentoPlugin_Model_Service_Config
         return (int)Mage::getStoreConfig(self::MIN_EXPECTED_ORDERS_PER_HOUR_NORMAL);
     }
 
-    public function getMaxExpectedOpenCarts(): int
+    public function getMinExpectedOrdersPerRushhour(): int
     {
-        return (int)Mage::getStoreConfig(self::MAX_EXPECTED_OPEN_CARTS);
+        return (int)Mage::getStoreConfig(self::MIN_EXPECTED_ORDERS_PER_RUSHHOUR);
+    }
+
+    public function getMaxExpectedOpenCartsPerNormalHour(): int
+    {
+        return (int)Mage::getStoreConfig(self::MAX_EXPECTED_OPEN_CARTS_PER_HOUR_NORMAL);
+    }
+
+    public function getMaxExpectedOpenCartsPerRushHour(): int
+    {
+        return (int)Mage::getStoreConfig(self::MAX_EXPECTED_OPEN_CARTS_PER_RUSH_HOUR);
     }
 
     public function getMinExpectedActiveProducts(): int

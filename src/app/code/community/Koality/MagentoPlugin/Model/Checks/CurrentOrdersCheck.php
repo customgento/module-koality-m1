@@ -8,8 +8,14 @@ class Koality_MagentoPlugin_Model_Checks_CurrentOrdersCheck
 {
     public function getResult(): Result
     {
-        $expectedOrderQty = $this->getExpectedOrderQty();
-        $currentOrderQty  = $this->getLastHourOrderCount();
+        $configGetter = Mage::getModel('koality_magentoplugin/service_config');
+        $isRushHour   = Mage::getModel('koality_magentoplugin/rushHourHandler')->isRushHour();
+        if ($isRushHour) {
+            $expectedOrderQty = $configGetter->getMinExpectedOrdersPerRushhour();
+        } else {
+            $expectedOrderQty = $configGetter->getMinExpectedOrdersPerNormalHour();
+        }
+        $currentOrderQty = $this->getLastHourOrderCount();
         if ($currentOrderQty < $expectedOrderQty) {
             $currentOrdersCheckResult = new Result(Result::STATUS_FAIL, Result::KEY_ORDERS_TOO_FEW,
                 'There were too few orders within the last hour.');
@@ -27,36 +33,11 @@ class Koality_MagentoPlugin_Model_Checks_CurrentOrdersCheck
         return $currentOrdersCheckResult;
     }
 
-    private function getExpectedOrderQty(): int
-    {
-        $currentWeekDay = date('w');
-        $isWeekend      = ($currentWeekDay === 0 || $currentWeekDay === 6);
-        $configGetter   = Mage::getModel('koality_magentoplugin/service_config');
-        $useRushHour    = $configGetter->getDoesRushhourIncludeWeekends() || !$isWeekend;
-        if ($useRushHour && $configGetter->getRushhourBegin() && $configGetter->getRushhourEnd()) {
-            $currentTimeStamp       = Mage::getModel('core/locale')->storeTimeStamp();
-            $beginRushHourTimeArray = explode(',', $configGetter->getRushhourBegin());
-            $beginRushHourTimestamp = $this->getTimestampFromTimeArray($beginRushHourTimeArray);
-            $endRushHourTimeArray   = explode(',', $configGetter->getRushhourEnd());
-            $endRushHourTimestamp   = $this->getTimestampFromTimeArray($endRushHourTimeArray);
-            if ($currentTimeStamp > $beginRushHourTimestamp && $currentTimeStamp < $endRushHourTimestamp) {
-                return $configGetter->getMinExpectedOrdersPerRushhour();
-            }
-        }
-
-        return $configGetter->getMinExpectedOrdersPerNormalHour();
-    }
-
     private function getLastHourOrderCount(): int
     {
         $fromTime = date('Y-m-d H:i:s', strtotime('- 1 hour'));
 
         return Mage::getModel('sales/order')->getCollection()->addFieldToFilter('created_at', ['from' => $fromTime])
             ->getSize();
-    }
-
-    private function getTimestampFromTimeArray(array $timeArray): int
-    {
-        return strtotime($timeArray[0] . ':' . $timeArray[1] . ':' . $timeArray[2]);
     }
 }

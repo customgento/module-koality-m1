@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config>
     <sections>
-        <koality_service translate="label" module="koality_magentoplugin">
+        <koality translate="label" module="koality_magentoplugin">
             <label>koality.io</label>
             <tab>service</tab>
             <sort_order>42</sort_order>
@@ -35,38 +35,29 @@
                         </refresh_key>
                     </fields>
                 </api>
-                <orders_per_hour translate="label">
-                    <label>Orders per hour</label>
+                <rush_hour>
+                    <label>Rush hour</label>
                     <sort_order>84</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <min_orders_per_normal_hour translate="label">
-                            <label>How many orders do you at least expect every hour outside the rush hour?</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>42</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <validate>validate-number</validate>
-                        </min_orders_per_normal_hour>
-                        <rush_hour_begin translate="label">
+                        <begin translate="label">
                             <label>When does your rush hour begin?</label>
                             <frontend_type>time</frontend_type>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </rush_hour_begin>
-                        <rush_hour_end translate="label">
+                        </begin>
+                        <end translate="label">
                             <label>When does your rush hour end?</label>
                             <frontend_type>time</frontend_type>
                             <sort_order>84</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </rush_hour_end>
+                        </end>
                         <include_weekends translate="label">
                             <label>Does the rush hour also happen on the weekend?</label>
                             <frontend_type>select</frontend_type>
@@ -76,10 +67,28 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </include_weekends>
+                    </fields>
+                </rush_hour>
+                <orders_per_hour translate="label">
+                    <label>Orders per hour</label>
+                    <sort_order>126</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <min_orders_per_normal_hour translate="label">
+                            <label>How many orders do you at least expect every hour in general?</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-number</validate>
+                        </min_orders_per_normal_hour>
                         <min_orders_per_rush_hour translate="label">
                             <label>How many orders do you at least expect every hour in the rush hour?</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>168</sort_order>
+                            <sort_order>84</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -89,25 +98,34 @@
                 </orders_per_hour>
                 <open_carts translate="label">
                     <label>Open Carts</label>
-                    <sort_order>126</sort_order>
+                    <sort_order>168</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <max_open_carts translate="label">
-                            <label>How many open carts may exist?</label>
+                        <max_open_carts_per_normal_hour translate="label">
+                            <label>How many open carts may exist in general?</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>42</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <validate>validate-number</validate>
-                        </max_open_carts>
+                        </max_open_carts_per_normal_hour>
+                        <max_open_carts_per_rush_hour translate="label">
+                            <label>How many open carts may exist during the rush hour?</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>84</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-number</validate>
+                        </max_open_carts_per_rush_hour>
                     </fields>
                 </open_carts>
                 <active_products translate="label">
                     <label>Active Products</label>
-                    <sort_order>168</sort_order>
+                    <sort_order>210</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -124,6 +142,6 @@
                     </fields>
                 </active_products>
             </groups>
-        </koality_service>
+        </koality>
     </sections>
 </config>

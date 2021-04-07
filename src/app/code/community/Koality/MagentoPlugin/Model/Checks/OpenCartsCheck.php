@@ -8,7 +8,14 @@ class Koality_MagentoPlugin_Model_Checks_OpenCartsCheck
 {
     public function getResult(): Result
     {
-        $maxExpectedCartQty = Mage::getModel('koality_magentoplugin/service_config')->getMaxExpectedOpenCarts();
+        $isRushHour = Mage::getModel('koality_magentoplugin/rushHourHandler')->isRushHour();
+        if ($isRushHour) {
+            $maxExpectedCartQty = Mage::getModel('koality_magentoplugin/service_config')
+                ->getMaxExpectedOpenCartsPerRushHour();
+        } else {
+            $maxExpectedCartQty = Mage::getModel('koality_magentoplugin/service_config')
+                ->getMaxExpectedOpenCartsPerNormalHour();
+        }
         $currentOpenCartQty = $this->getCurrentOpenCartQty();
         if ($currentOpenCartQty > $maxExpectedCartQty) {
             $openCartCheckResult = new Result(Result::STATUS_FAIL, Result::KEY_CARTS_OPEN_TOO_MANY,
