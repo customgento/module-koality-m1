@@ -16,7 +16,7 @@ class Koality_MagentoPlugin_Model_Service_Config
 
     public function getApiKey(): string
     {
-        return Mage::getStoreConfig(self::API_KEY)?: '';
+        return Mage::getStoreConfig(self::API_KEY) ?: '';
     }
 
     public function getRushhourBegin(): string
