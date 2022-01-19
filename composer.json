@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "OSL-3.0",
     "homepage": "https://github.com/customgento/module-koality-m1",
-    "description": "koality.io Integration with Magento 1 / OpenMage",
+    "description": "koality.io Magento 1 Plugin can be used to continuously monitor a Magento 1 shop for business metrics.",
     "authors": [
         {
             "name": "Team CustomGento",
